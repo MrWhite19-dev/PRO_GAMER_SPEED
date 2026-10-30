@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#050914">
+  <title>Compétitions gaming | PRO GAMER SPEED</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+</head>
+<body>
+  <div class="topline"></div>
+  <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">⚡</span><span>PRO GAMER <b>SPEED</b></span></a><button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav"><a href="index.html">Accueil</a><a href="reservation.html">Réservation</a><a class="active" href="competition.html">Compétitions</a><a class="nav-cta" href="reservation.html">Réserver maintenant</a></nav></header>
+  <main>
+    <section class="page-hero competition-hero"><p class="eyebrow"><span class="pulse"></span> PROUVE TON NIVEAU</p><h1>JOIN THE <span class="blue-text">BATTLE.</span></h1><p>Inscris-toi pour participer aux compétitions PRO GAMER SPEED. Prépare-toi à défendre ton niveau.</p></section>
+    <section class="section competition-intro"><div><p class="eyebrow">INSCRIPTION JOUEUR</p><h2>TA PLACE DANS<br><span class="blue-text">LA COMPÉTITION.</span></h2><p>Remplis le formulaire. Un ticket virtuel individuel sera généré à la fin de ton inscription.</p></div><div class="notice-card"><span class="notice-icon">!</span><div><b>À SAVOIR</b><p>Les dates, jeux, frais de participation et règlements seront communiqués par l'organisateur. Une inscription affichée sur cette maquette n'est pas encore transmise à l'administration.</p></div></div></section>
+    <section class="section competition-form-section">
+      <form id="competition-form" class="form-card">
+        <div class="form-title"><span>FORMULAIRE D'INSCRIPTION</span><span class="step">PLAYER REGISTRATION</span></div>
+        <div class="field-row"><label>Nom et prénom<input name="fullname" type="text" placeholder="Ton nom complet" required minlength="2"></label><label>Pseudo gamer<input name="nickname" type="text" placeholder="Ton pseudo" required></label></div>
+        <div class="field-row"><label>Numéro WhatsApp<input name="phone" type="tel" placeholder="Ex. : 07 00 00 00 00" required></label><label>Adresse e-mail<input name="email" type="email" placeholder="Ton adresse e-mail" required></label></div>
+        <div class="field-row"><label>Compétition / Jeu<select name="game" required><option value="">Choisir une compétition</option><option>EA SPORTS FC / FIFA</option><option>Tekken</option><option>Call of Duty</option><option>Autre / À confirmer</option></select></label><label>Âge<input name="age" type="number" min="10" max="99" placeholder="Ton âge" required></label></div>
+        <label>Message à l'organisateur <span class="optional">(facultatif)</span><textarea name="message" rows="3" placeholder="Information complémentaire..."></textarea></label>
+        <label class="consent"><input type="checkbox" name="consent" required><span>J'accepte que mes informations soient utilisées pour gérer mon inscription à la compétition.</span></label>
+        <button class="btn btn-primary btn-full" type="submit">Générer mon ticket virtuel ↗</button>
+        <p class="form-note">Pour le moment, le ticket est généré sur cet appareil. L'envoi réel par e-mail et l'enregistrement centralisé seront activés après la configuration du service d'inscription.</p><p class="form-feedback" id="competition-feedback" role="status"></p>
+      </form>
+      <div id="ticket-result" class="ticket-result" hidden aria-live="polite">
+        <div class="ticket-top"><span class="eyebrow">PRO GAMER SPEED · PLAYER PASS</span><span class="ticket-status">TICKET CRÉÉ</span></div>
+        <h2>TON PASS<br><span class="blue-text">COMPÉTITION.</span></h2>
+        <div class="ticket-number" id="ticket-number"></div>
+        <div class="ticket-data" id="ticket-data"></div>
+        <div class="ticket-qr-wrap"><div id="ticket-qr"></div><span>QR CODE DU PARTICIPANT</span></div>
+        <p class="ticket-warning">Présente ce ticket à l'organisateur. Il s'agit d'un justificatif provisoire : l'inscription ne sera officiellement reçue qu'après activation du service d'enregistrement.</p>
+        <button class="btn btn-outline btn-full" id="print-ticket" type="button">Imprimer / Enregistrer en PDF</button>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><a class="brand" href="index.html"><span class="brand-mark">⚡</span><span>PRO GAMER <b>SPEED</b></span></a><p>La passion du jeu. L'énergie de la compétition.</p><div class="footer-links"><a href="index.html">Accueil</a><a href="reservation.html">Réservation</a><a href="competition.html">Compétitions</a></div><small>© <span data-year></span> PRO GAMER SPEED. Tous droits réservés.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>

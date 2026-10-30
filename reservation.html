@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#050914">
+  <title>Réserver une session | PRO GAMER SPEED</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topline"></div>
+  <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">⚡</span><span>PRO GAMER <b>SPEED</b></span></a><button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav"><a href="index.html">Accueil</a><a class="active" href="reservation.html">Réservation</a><a href="competition.html">Compétitions</a><a class="nav-cta" href="reservation.html">Réserver maintenant</a></nav></header>
+  <main>
+    <section class="page-hero"><p class="eyebrow"><span class="pulse"></span> RÉSERVE TON CRÉNEAU</p><h1>PRÊT À <span class="blue-text">JOUER ?</span></h1><p>Renseigne les informations ci-dessous. Ta demande sera préparée dans WhatsApp pour être envoyée directement à notre équipe.</p></section>
+    <section class="form-layout section">
+      <div class="form-aside"><span class="aside-number">01 — BOOK YOUR GAME</span><h2>TA PROCHAINE<br><span class="blue-text">SESSION COMMENCE ICI.</span></h2><p>Choisis ton expérience et indique-nous le créneau qui t'intéresse. Notre équipe te répondra pour confirmer la disponibilité.</p><div class="aside-info"><span class="info-icon">⌖</span><div><b>OÙ NOUS TROUVER</b><p>Carrefour Super Sonia, Yopougon</p></div></div><div class="aside-info"><span class="info-icon">◷</span><div><b>RÉSERVATION</b><p>La réservation est confirmée après échange avec notre équipe.</p></div></div></div>
+      <form id="booking-form" class="form-card">
+        <div class="form-title"><span>FORMULAIRE DE RÉSERVATION</span><span class="step">ÉTAPE 01 / 01</span></div>
+        <div class="field-row"><label>Nom et prénom<input name="fullname" type="text" placeholder="Ex. : Koffi Jean" required minlength="2"></label><label>Téléphone<input name="phone" type="tel" placeholder="Ex. : 07 00 00 00 00" required></label></div>
+        <div class="field-row"><label>Date souhaitée<input name="date" type="date" required></label><label>Heure souhaitée<input name="time" type="time" required></label></div>
+        <label>Expérience souhaitée<select name="game" required><option value="">Sélectionner une expérience</option><option>PlayStation 5</option><option>Réalité virtuelle VR2</option><option>Simulateur</option><option>Espace Next Gen</option><option>Autre / À préciser</option></select></label>
+        <div class="field-row"><label>Nombre de joueurs<input name="players" type="number" min="1" max="20" value="1" required></label><label>Durée souhaitée<select name="duration" required><option value="">Choisir une durée</option><option>30 minutes</option><option>1 heure</option><option>2 heures</option><option>3 heures</option><option>À définir</option></select></label></div>
+        <label>Message complémentaire <span class="optional">(facultatif)</span><textarea name="message" rows="3" placeholder="Une précision pour notre équipe..."></textarea></label>
+        <button class="btn btn-primary btn-full" type="submit">Envoyer ma demande sur WhatsApp ↗</button>
+        <p class="form-note">En cliquant, WhatsApp s'ouvrira avec ton message prérempli. Tu devras appuyer sur « Envoyer » dans WhatsApp.</p><p class="form-feedback" id="booking-feedback" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="footer"><a class="brand" href="index.html"><span class="brand-mark">⚡</span><span>PRO GAMER <b>SPEED</b></span></a><p>La passion du jeu. L'énergie de la compétition.</p><div class="footer-links"><a href="index.html">Accueil</a><a href="reservation.html">Réservation</a><a href="competition.html">Compétitions</a></div><small>© <span data-year></span> PRO GAMER SPEED. Tous droits réservés.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
